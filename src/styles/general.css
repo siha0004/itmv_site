@@ -1,0 +1,85 @@
+/************* VARIABLES *************/
+
+html {
+  --font_body: Helvetica, sans-serif;
+
+  --primary: #3d5c6d;
+  --secondary: #efeeea;
+  --white: #fff;
+  --accent: #eb4924;
+}
+/************* RESET *************/
+
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body {
+  max-width: 1800px;
+  margin: 0 auto;
+  background-color: var(--white);
+}
+
+img {
+  width: 100%;
+  height: auto;
+}
+
+/************* TEXT *************/
+
+p {
+  font-family: var(--font_body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  max-width: 65ch;
+  color: var(--primary);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: var(--font_body);
+  font-weight: 400;
+}
+
+.h1 {
+  font-size: 2.5rem;
+}
+
+.h2 {
+  font-size: 2rem;
+}
+
+.h3 {
+  font-size: 1.5rem;
+}
+
+/************* LINK STYLING *************/
+a {
+  font-family: var(--font_body);
+  font-weight: 400;
+  color: var(--primary);
+  text-decoration: none;
+}
+
+a:hover {
+  font-weight: 700;
+}
+
+@media (min-width: 800px) {
+  .h1 {
+    font-size: 3.5rem;
+  }
+  .h2 {
+    font-size: 2.5rem;
+  }
+  .h3 {
+    font-size: 2rem;
+  }
+}
