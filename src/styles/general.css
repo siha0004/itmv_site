@@ -64,12 +64,13 @@ h6 {
 a {
   font-family: var(--font_body);
   font-weight: 400;
+  font-size: 1rem;
   color: var(--primary);
   text-decoration: none;
 }
 
 a:hover {
-  font-weight: 700;
+  color: var(--accent);
 }
 
 @media (min-width: 800px) {
