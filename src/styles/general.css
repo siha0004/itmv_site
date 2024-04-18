@@ -6,7 +6,7 @@ html {
   --primary: #3d5c6d;
   --secondary: #efeeea;
   --white: #fff;
-  --accent: #eb4924;
+  --accent: #e94b26;
 }
 /************* RESET *************/
 
@@ -45,7 +45,9 @@ h4,
 h5,
 h6 {
   font-family: var(--font_body);
-  font-weight: 400;
+  font-weight: 200;
+  text-transform: uppercase;
+  color: var(--primary);
 }
 
 .h1 {
@@ -57,7 +59,11 @@ h6 {
 }
 
 .h3 {
-  font-size: 1.5rem;
+  font-size: 1.25rem;
+}
+
+.light_txt {
+  color: white;
 }
 
 /************* LINK STYLING *************/
@@ -71,6 +77,15 @@ a {
 
 a:hover {
   color: var(--accent);
+}
+
+li {
+  font-family: var(--font_body);
+  font-weight: 400;
+  font-size: 1rem;
+  line-height: 150%;
+  max-width: 65ch;
+  color: var(--primary);
 }
 
 @media (min-width: 800px) {
