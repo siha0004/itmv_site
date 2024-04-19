@@ -1,0 +1,18 @@
+---
+const { heading, name, email, title } = Astro.props;
+---
+
+<section>
+  <h2>{heading}</h2>
+  <h3>{name}</h3>
+  <h4>{title}</h4>
+  <p>{email}</p>
+  <img src="/img/tester.png" alt="Billede af Ira" />
+</section>
+
+<style>
+  section {
+    background-color: var(--secondary);
+    padding: 4rem 2rem;
+  }
+</style>
