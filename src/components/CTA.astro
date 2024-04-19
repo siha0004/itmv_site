@@ -1,0 +1,50 @@
+---
+import Button from "./Button.astro";
+
+const { heading } = Astro.props;
+---
+
+<section>
+  <article class="data">
+    <p class="number">12</p>
+    <p>Kvinder i job</p>
+  </article>
+  <h3>{heading}</h3>
+  <p class="text"><slot /></p>
+  <Button type="secondary">Bestil nu</Button>
+  <img class="graphics" src="/img/svg/heart_line.svg" alt="illustration" />
+</section>
+
+<style>
+  section {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    background-color: var(--secondary);
+    padding: 4rem 2rem;
+  }
+
+  .data {
+    margin: 2rem 2rem 6rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .number {
+    font-size: 4rem;
+  }
+
+  .text {
+    text-align: center;
+  }
+
+  .graphics {
+    position: absolute;
+    top: 3rem;
+    left: -2rem;
+    width: 130%;
+  }
+</style>
