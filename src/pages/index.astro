@@ -1,19 +1,25 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import WFText from "../components/WFText.astro";
 ---
 
 <MainLayout>
   <div>
     <Button> Tester </Button>
   </div>
+  <WFText heading="Sif finder lige på noget">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consectetur suscipit, corrupti, incidunt laudantium ea similique temporibus, officiis nostrum sapiente quia. Labore, quo harum delectus possimus alias saepe doloribus omnis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sint accusamus eos aut quo, blanditiis, distinctio in iusto recusandae, nisi et voluptate incidunt consequatur labore optio exercitationem nobis. Aliquid, delectus.</p>
+  </WFText>
 </MainLayout>
 
 <style>
   div {
     background-color: var(--primary);
     height: 100px;
-    width: 300px;
-    padding: 4rem;
+    width: 100%;
+
+    padding: 1rem 2rem;
   }
 </style>
