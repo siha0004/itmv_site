@@ -1,0 +1,55 @@
+---
+const { title, name } = Astro.props;
+---
+
+<a href="/#">
+  <article>
+    <img src="/img/tester.png" alt="Billede af Ira" />
+    <div class="gradient">
+      <div class="container">
+        <div class="info">
+          <h3 class="title">{title}</h3>
+          <h2 class="name">{name}</h2>
+        </div>
+        <img class="arrow" src="/img/svg/arrow.svg" alt="arrow icon" />
+      </div>
+    </div>
+  </article>
+</a>
+
+<style>
+  article {
+    height: 80%;
+    width: auto;
+    position: relative;
+    margin: 2rem;
+  }
+
+  .gradient {
+    position: absolute;
+    bottom: 0;
+    height: 6rem;
+    width: 100%;
+    background: linear-gradient(0deg, rgba(239, 238, 234, 1) 25%, rgba(239, 238, 234, 0.9) 40%, rgba(239, 238, 234, 0.6) 75%, rgba(239, 238, 234, 0) 100%);
+  }
+
+  .container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 2rem 2rem;
+  }
+  .name {
+    text-transform: capitalize;
+    font-size: 1.25rem;
+  }
+
+  .title {
+    text-transform: none;
+    font-size: 0.9rem;
+    margin-bottom: 0.35rem;
+  }
+  .arrow {
+    width: 0.75rem;
+  }
+</style>
