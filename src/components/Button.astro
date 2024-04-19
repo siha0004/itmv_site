@@ -1,22 +1,20 @@
 ---
-const { link } = Astro.props;
+const { link, type } = Astro.props;
 ---
 
-<a class="button" href={link}><span><slot /></span> </a>
+<a class={"button " + type} href={link}><span><slot /></span> </a>
 
 <style>
   /* Stylet med udgangspunkt i Button 3 fra følgende CodePen eksempel af Sarath AR */
   /* https://codepen.io/sarath-ar/pen/dMKxxM?editors=1100 */
-
   a {
     font-family: var(--font_body);
     font-weight: 300;
     font-size: 1rem;
-    color: var(--white);
 
     display: inline-block;
     position: relative;
-    border-bottom: thin solid #fff;
+    border-bottom: thin solid;
 
     padding: 1rem 2rem;
     width: fit-content;
@@ -32,7 +30,7 @@ const { link } = Astro.props;
     height: 1px;
     position: absolute;
     transition: all 0.2s linear;
-    background: #fff;
+    background: var(--white);
   }
 
   span::before,
@@ -42,7 +40,7 @@ const { link } = Astro.props;
     height: 0;
     position: absolute;
     transition: all 0.2s linear;
-    background: #fff;
+    background: var(--white);
   }
   a:hover::before,
   a:hover::after {
@@ -86,5 +84,24 @@ const { link } = Astro.props;
   }
   .button:hover span::before {
     transition-delay: 0.6s;
+  }
+
+  /* TYPE */
+  .primary {
+    color: var(--white);
+    border-color: var(--white);
+  }
+  .secondary {
+    color: var(--accent);
+    border-color: var(--accent);
+  }
+
+  .secondary::before,
+  .secondary::after {
+    background: var(--accent);
+  }
+  .secondary span::before,
+  .secondary span::after {
+    background: var(--accent);
   }
 </style>
