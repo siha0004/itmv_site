@@ -1,0 +1,210 @@
+---
+
+---
+
+<!-- Developed from https://codepen.io/sophgdn/pen/pxPmgr -->
+<section id="window">
+  <div id="slide-container">
+    <div class="slides">
+      <!-- First image -->
+      <img class="slide" src="/img/tester.png" alt="spring" />
+      <div class="overlay_slider">
+        <div class="text-box">
+          <h2>Spring</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Second image -->
+    <div class="slides">
+      <img class="slide" src="/img/svg/measure.svg" alt="summer" />
+      <div class="overlay_slider">
+        <div class="text-box">
+          <h2>Summer</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Third image -->
+    <div class="slides">
+      <img class="slide" src="/img/svg/repair.svg" alt="autumn" />
+      <div class="overlay_slider">
+        <div class="text-box">
+          <h2>Autumn</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fourth image -->
+    <div class="slides">
+      <img class="slide" src="img/winter.webp" alt="winter" />
+      <div class="overlay_slider">
+        <div class="text-box">
+          <h2>Winter</h2>
+        </div>
+      </div>
+    </div>
+
+    <!-- Navigation -->
+    <a id="previous" class="arrow">&#10094;</a>
+    <a id="next" class="arrow">&#10095;</a>
+    <div id="text-bar">
+      <p id="place"></p>
+    </div>
+  </div>
+  <div id="dotsContainer"></div>
+</section>
+
+<style>
+  /*************** slider ********************/
+  :root {
+    --transparent-grey: rgba(0, 0, 0, 0.5);
+  }
+
+  /* Width of carousel */
+  #window,
+  #slide-container {
+    width: 100%;
+  }
+
+  /* Height of carousel */
+  #slide-container {
+    height: 0;
+    overflow: hidden;
+    position: relative;
+    padding-bottom: 56.25%;
+  }
+
+  .slide {
+    width: 100%;
+    border-radius: 0px;
+    filter: brightness(70%);
+  }
+
+  /* Style of arrows */
+  .arrow {
+    color: var(--white);
+    font-size: 26px;
+    position: absolute;
+    top: 50%;
+    transform: translate(0%, -50%);
+    padding: 16px;
+    /* background-color: rgba(0, 0, 0, 0); */
+    transition: background-color 0.3s ease;
+  }
+
+  .arrow:hover {
+    cursor: pointer;
+    background-color: rgba(255, 255, 255, 0.6);
+  }
+
+  #next {
+    left: 100%;
+    transform: translate(-100%, -50%);
+    border-radius: 4px 0px 0px 4px;
+  }
+
+  #previous {
+    border-radius: 0px 4px 4px 0px;
+  }
+
+  #dotsContainer {
+    width: 100%;
+    height: 20px;
+    text-align: center;
+    margin-bottom: var(--gap_l);
+  }
+
+  .dots {
+    width: 8px;
+    height: 8px;
+    background-color: rgba(0, 0, 0, 0.2);
+    border-radius: 100%;
+    display: inline-block;
+    margin: 8px 2px;
+  }
+
+  /*.dots:hover {
+  cursor: pointer;
+  background-color: rgba(0, 0, 0, 0.4);
+}*/
+
+  .activeDot {
+    background-color: rgba(0, 0, 0, 0.6);
+  }
+
+  .overlay_slider {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    width: 300px;
+    height: 170px;
+    border-radius: 10px;
+  }
+
+  .text-box {
+    display: flex;
+    flex-direction: column;
+    gap: var(--gap_s);
+    padding: var(--gap_s);
+    background-color: rgba(255, 255, 255, 0.6);
+    border-radius: var(--radius);
+  }
+</style>
+
+<script>
+  var index = 0;
+  var locations = ["Spring", "Summer", "Autumn", "Winter"];
+
+  var slides = document.getElementsByClassName("slides");
+  var nextArrow = document.getElementById("next");
+
+  var previousArrow = document.getElementById("previous");
+
+  var place = document.getElementById("place");
+
+  var dotsContainer = document.getElementById("dotsContainer");
+
+  var dotArray = document.getElementsByClassName("dots");
+
+  createDots();
+  showSlides(index);
+
+  function createDots() {
+    for (i = 0; i < slides.length; i++) {
+      var dot = document.createElement("span");
+      dot.className = "dots";
+      dotsContainer.appendChild(dot);
+    }
+  }
+
+  function showSlides(x) {
+    if (x > slides.length - 1) {
+      index = 0;
+    }
+    if (x < 0) {
+      index = slides.length - 1;
+    }
+    for (i = 0; i < slides.length; i++) {
+      slides[i].style.display = "none";
+      dotArray[i].className = "dots";
+    }
+
+    slides[index].style.display = "block";
+    dotArray[index].className += " activeDot";
+    place.innerHTML = locations[index];
+  }
+
+  nextArrow.onclick = function () {
+    index += 1;
+    showSlides(index);
+  };
+
+  previousArrow.onclick = function () {
+    index -= 1;
+    showSlides(index);
+  };
+
+  dotArray[0].onclick = showSlides(1);
+</script>
