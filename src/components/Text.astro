@@ -1,0 +1,17 @@
+---
+const { heading } = Astro.props;
+---
+
+<article>
+  <h3>{heading}</h3>
+  <slot />
+</article>
+
+<style>
+  article {
+    margin: 3rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+</style>

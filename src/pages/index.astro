@@ -1,19 +1,49 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
+import Text from "../components/Text.astro";
+import Accordion from "../components/Accordion.astro";
+import CardReview from "../components/CardReview.astro";
+import CardWebfeature from "../components/CardWebfeature.astro";
+import Hero from "../components/Hero.astro";
+import CTA from "../components/CTA.astro";
+import Partners from "../components/Partners.astro";
+import CardPackage from "../components/CardPackage.astro";
+import Blue from "../components/Blue.astro";
 ---
 
 <MainLayout>
+  <Hero name="- Sif, Designer"> "Her står der noget godt og klogt, som jeg mener" </Hero>
   <div>
-    <Button> Tester </Button>
+    <Button type="primary"> Tester </Button>
+    <Button type="secondary"> Tester Accent</Button>
   </div>
+  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+  <CardReview name="Sif Melkane" title="Multimediedesigner">
+    <p>Her er et citat som jeg lige finder på, fordi der skal stå noget!</p>
+  </CardReview>
+  <CardWebfeature name="Sif Melkane, 25 år" title="Multimediedesigner" />
+  <Text heading="Sif finder lige på noget">
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consectetur suscipit, corrupti, incidunt laudantium ea similique temporibus, officiis nostrum sapiente quia. Labore, quo harum delectus possimus alias saepe doloribus omnis.</p>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sint accusamus eos aut quo, blanditiis, distinctio in iusto recusandae, nisi et voluptate incidunt consequatur labore optio exercitationem nobis. Aliquid, delectus.</p>
+  </Text>
+  <Blue heading="Tester">
+    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
+    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
+    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
+  </Blue>
+  <Partners heading="Samarbejde" />
+  <CTA heading="Repair Service"> Lorem ipsum dolor sit amet consectetur, sunt impedit! Similique? </CTA>
 </MainLayout>
 
 <style>
   div {
     background-color: var(--primary);
-    height: 100px;
-    width: 300px;
-    padding: 4rem;
+    height: 300px;
+    width: 100%;
+
+    padding: 1rem 2rem;
   }
 </style>

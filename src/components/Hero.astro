@@ -1,0 +1,49 @@
+---
+const { name } = Astro.props;
+---
+
+<article>
+  <img src="/img/tester.png" alt="Billede af kvinde" />
+  <div class="gradient">
+    <div class="info">
+      <h1 class="title">
+        <slot />
+      </h1>
+      <h3 class="name">{name}</h3>
+    </div>
+  </div>
+</article>
+
+<style>
+  article {
+    position: relative;
+  }
+
+  .gradient {
+    position: absolute;
+    top: 0;
+    height: 12rem;
+    width: 100%;
+    background: linear-gradient(180deg, rgba(239, 238, 234, 1) 35%, rgba(239, 238, 234, 0.9) 65%, rgba(239, 238, 234, 0.6) 80%, rgba(239, 238, 234, 0) 100%);
+  }
+
+  .info {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+    padding: 2rem 2rem;
+  }
+
+  .title {
+    text-transform: none;
+    text-align: center;
+    font-size: 1.25rem;
+  }
+  .name {
+    text-transform: capitalize;
+    font-size: 1rem;
+  }
+  .arrow {
+    width: 0.75rem;
+  }
+</style>

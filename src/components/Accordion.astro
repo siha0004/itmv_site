@@ -1,0 +1,84 @@
+---
+const { question, answer } = Astro.props;
+---
+
+<div class="accordion_item">
+  <div class="accordion_header">
+    <p>{question}</p>
+    <img class="plus" src="/img/svg/plus.svg" alt="plus icon" />
+  </div>
+  <div class="accordion_content">
+    <p>{answer}</p>
+  </div>
+</div>
+
+<!------------------------------------------------------------------------ CSS --------------------------------------------------------------------------------->
+<!------------------------------------------------------------------------ CSS --------------------------------------------------------------------------------->
+
+<style>
+  .accordion_item {
+    border-bottom: thin dashed var(--primary);
+  }
+
+  .accordion_header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-family: var(--font_body);
+    font-size: 1rem;
+    color: var(--primary);
+    padding: 1rem;
+  }
+
+  .accordion_content {
+    display: none;
+    padding: 1rem;
+  }
+
+  p {
+    max-width: 85%;
+  }
+
+  /* plus - styling & rotation */
+  .plus {
+    width: 25px;
+    transition: transform 0.3s ease;
+  }
+
+  .rotate {
+    transform: rotate(45deg);
+  }
+</style>
+
+<!------------------------------------------------------------------------ JavaScript ------------------------------------------------------------------------->
+<!------------------------------------------------------------------------ JavaScript ------------------------------------------------------------------------->
+
+<script>
+  // Find alle accordion-elementer
+  const accordionItems = document.querySelectorAll(".accordion_item");
+
+  // Der snakkes til hver accordion-item (header & plus)
+  accordionItems.forEach((item) => {
+    const header = item.querySelector(".accordion_header");
+    const plus = item.querySelector(".plus");
+
+    // Lyt efter et click på hver accordion-item (header & plus)
+    header.addEventListener("click", () => {
+      // Når der er klikket = Skjul alle accordion-indholdselementer
+      accordionItems.forEach((accItem) => {
+        const content = accItem.querySelector(".accordion_content") as HTMLElement;
+        if (accItem !== item) {
+          content.style.display = "none";
+          accItem.querySelector(".plus")?.classList.remove("rotate"); // Fjern rotation på andre pile
+        }
+      });
+
+      // Skift visning af det aktuelle accordion-indhold
+      const content = item.querySelector(".accordion_content") as HTMLElement;
+      content.style.display = content.style.display === "block" ? "none" : "block";
+
+      // Roter pilikonet
+      plus.classList.toggle("rotate");
+    });
+  });
+</script>
