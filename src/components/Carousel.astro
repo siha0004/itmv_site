@@ -154,25 +154,25 @@
 </style>
 
 <script>
-  var index = 0;
-  var locations = ["Spring", "Summer", "Autumn", "Winter"];
+  let index = 0;
+  let locations = ["Spring", "Summer", "Autumn", "Winter"];
 
-  var slides = document.getElementsByClassName("slides");
-  var nextArrow = document.getElementById("next");
+  let slides = document.getElementsByClassName("slides");
+  let nextArrow = document.getElementById("next");
 
-  var previousArrow = document.getElementById("previous");
+  let previousArrow = document.getElementById("previous");
 
-  var place = document.getElementById("place");
+  let place = document.getElementById("place");
 
-  var dotsContainer = document.getElementById("dotsContainer");
+  let dotsContainer = document.getElementById("dotsContainer");
 
-  var dotArray = document.getElementsByClassName("dots");
+  let dotArray = document.getElementsByClassName("dots");
 
   createDots();
   showSlides(index);
 
   function createDots() {
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       var dot = document.createElement("span");
       dot.className = "dots";
       dotsContainer.appendChild(dot);
@@ -186,7 +186,7 @@
     if (x < 0) {
       index = slides.length - 1;
     }
-    for (i = 0; i < slides.length; i++) {
+    for (let i = 0; i < slides.length; i++) {
       slides[i].style.display = "none";
       dotArray[i].className = "dots";
     }
