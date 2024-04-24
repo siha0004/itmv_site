@@ -3,35 +3,42 @@ import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Accordion from "../components/Accordion.astro";
 import CardReview from "../components/CardReview.astro";
-import CardWebfeature from "../components/CardWebfeature.astro";
 import Partners from "../components/Partners.astro";
 import CardPackage from "../components/CardPackage.astro";
 import Blue from "../components/Blue.astro";
 import Contact from "../components/Contact.astro";
+import SliderReviews from "../components/SliderReviews.astro";
+import SliderWebfeature from "../components/SliderWebfeature.astro";
 ---
 
 <MainLayout>
   <section class="hero">
     <h1>Repair Service</h1>
-    <p>Vi gør genanvendelse let tilgængelig for din virksomheds medarbejdere, samtidig med at du styrker virksomhedens ESG-mål.</p>
+    <p>I Tråd Med Verden tilbyder repair service på din arbejdsplads, hvilket gør genanvendelse let tilgængelig for din virksomheds medarbejdere, samtidig med at du styrker virksomhedens ESG-mål.</p>
     <div class="icons">
       <img class="icon" src="/img/svg/embroidery.svg" alt="Ikon af brodering" />
       <img class="icon" src="/img/svg/measure.svg" alt="Ikon af opmåling" />
       <img class="icon" src="/img/svg/repair.svg" alt="Ikon af reperation" />
     </div>
     <article>
-      <Accordion question="Hvad tilbyder vi?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
-      <Accordion question="Hvorffor skal du vælge os?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
-      <Accordion question="Hvordan foregår det?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+      <Accordion question="Hvad tilbyder vi?" answer="Vi tilbyder reparation, tilpasning og fornyelse af tøj til din virksomheds medarbejdere. Vores team består af to syerske og en designer. De vil sidde klar ved symaskinerne, til at hjælpe jer med at forlænge levetiden på tøjet." />
+      <Accordion
+        question="Hvorffor skal du vælge os?"
+        answer="Igennem repair service gør du genanvendelse let og tilgængeligt for dine medarbejdere, og du styrker din virksomheds E (environmental) & S (social) i jeres ESG mål. Samtidig støtter du ITMVs arbejde med at skabe flere lønnede timer til vores syersker."
+      />
+      <Accordion
+        question="Hvordan foregår det?"
+        answer="Sammen aftaler vi en fast dag, hvor vores team kommer ud til din virksomhed (Københavnsområdet, tilgængeligt med offentlig transport). Der vil være drop in og aflevering af tøjet om morgenen. Vi bestræber os på at blive færdige med dagens reparationer samme dag. Men det kan variere, afhængig af opgaven."
+      />
     </article>
     <Button type="secondary">Bestil nu</Button>
   </section>
   <section class="webfeatures">
-    <h2>Mød teamet</h2>
-    <p>Læs mere om kvinderne bag Repair Service teamet, og hør hvordan dette har været med til at ændrer deres hverdag.</p>
     <article>
-      <CardWebfeature name="Ira, 38 år" title="Syerske" />
+      <h2>Kvinderne bag repair service teamet</h2>
+      <p>Læs mere om kvinderne bag Repair Service teamet, og hør hvordan dette har været med til at ændrer deres hverdag.</p>
     </article>
+    <SliderWebfeature />
   </section>
   <Blue heading="Pakker">
     <CardPackage name="Den Enkle" times="1 gang" price_one="5400" price_total="5400"> Repair service én gang </CardPackage>
@@ -43,9 +50,8 @@ import Contact from "../components/Contact.astro";
     <Button type="primary">Bestil nu</Button>
   </Blue>
   <Partners heading="Samarbejder" />
-  <CardReview name="Mark Petterson" title="Digital redaktør, KAB">
-    <p>Fantastisk koncept. Jeg er glad for at kunne hjælpe de to syerske, med at få foden ind på arbejdsmarkedet.</p>
-  </CardReview>
+  <SliderReviews />
+
   <Contact />
 </MainLayout>
 
@@ -67,9 +73,12 @@ import Contact from "../components/Contact.astro";
   }
 
   .webfeatures {
-    padding: 4rem 2rem;
+    padding: 4rem 0rem;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+  .webfeatures article {
+    padding: 0rem 1rem;
   }
 </style>
