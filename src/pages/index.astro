@@ -2,7 +2,6 @@
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
 import Accordion from "../components/Accordion.astro";
-import CardReview from "../components/CardReview.astro";
 import Partners from "../components/Partners.astro";
 import CardPackage from "../components/CardPackage.astro";
 import Blue from "../components/Blue.astro";
@@ -35,7 +34,7 @@ import SliderWebfeature from "../components/SliderWebfeature.astro";
   </section>
   <section class="webfeatures">
     <article>
-      <h2>Kvinderne bag repair service teamet</h2>
+      <h2>Kvinderne bag repair service</h2>
       <p>Læs mere om kvinderne bag Repair Service teamet, og hør hvordan dette har været med til at ændrer deres hverdag.</p>
     </article>
     <SliderWebfeature />
@@ -63,6 +62,7 @@ import SliderWebfeature from "../components/SliderWebfeature.astro";
     flex-direction: column;
     gap: 1rem;
   }
+
   .icons {
     display: flex;
     justify-content: space-evenly;
@@ -80,5 +80,8 @@ import SliderWebfeature from "../components/SliderWebfeature.astro";
   }
   .webfeatures article {
     padding: 0rem 1rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>

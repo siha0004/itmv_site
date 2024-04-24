@@ -1,9 +1,9 @@
 ---
-const { heading } = Astro.props;
+const { show, heading } = Astro.props;
 ---
 
 <article>
-  <h3>{heading}</h3>
+  <h3 class={show}>{heading}</h3>
   <slot />
 </article>
 
@@ -13,5 +13,9 @@ const { heading } = Astro.props;
     display: flex;
     flex-direction: column;
     gap: 1rem;
+  }
+
+  .hide {
+    display: none;
   }
 </style>
