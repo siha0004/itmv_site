@@ -1,10 +1,10 @@
 ---
-const { title, name } = Astro.props;
+const { title, name, img } = Astro.props;
 ---
 
 <a href="/webfeature">
   <article>
-    <img src="/img/tester.png" alt="Billede af Ira" />
+    <img src=`/img/webp/${img}` alt="Billede af Ira" />
     <div class="gradient">
       <div class="container">
         <div class="info">
