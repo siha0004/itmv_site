@@ -1,0 +1,43 @@
+---
+import CardReview from "./CardReview.astro";
+---
+
+<div class="carousel">
+  <div carousel-item>
+    <CardReview name="Sif Melkane" title="Multimediedesigner">
+      <p>Her er et citat som jeg lige finder på, fordi der skal stå noget!</p>
+    </CardReview>
+  </div>
+  <div carousel-item>
+    <CardReview name="Sif Melkane" title="Multimediedesigner">
+      <p>Her er et citat som jeg lige finder på, fordi der skal stå noget!</p>
+    </CardReview>
+  </div>
+  <div carousel-item>
+    <CardReview name="Sif Melkane" title="Multimediedesigner">
+      <p>Her er et citat som jeg lige finder på, fordi der skal stå noget!</p>
+    </CardReview>
+  </div>
+  <style>
+    .carousel {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      /* Set a minimum width to ensure horizontal scrolling */
+      min-width: 100%;
+      /* Allow items to wrap if they exceed container width */
+      flex-wrap: nowrap;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      width: 200px; /* eller en hvilken som helst anden ønsket bredde */
+    }
+  </style>
+</div>

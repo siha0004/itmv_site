@@ -1,0 +1,37 @@
+---
+import CardWebfeature from "./CardWebfeature.astro";
+---
+
+<div class="carousel">
+  <div carousel-item>
+    <CardWebfeature name="Sif Melkane, 25 år" title="Multimediedesigner" />
+  </div>
+  <div carousel-item>
+    <CardWebfeature name="Sif Melkane, 25 år" title="Multimediedesigner" />
+  </div>
+  <div carousel-item>
+    <CardWebfeature name="Sif Melkane, 25 år" title="Multimediedesigner" />
+  </div>
+  <style>
+    .carousel {
+      display: flex;
+      flex-direction: row;
+      overflow-x: auto;
+      scroll-snap-type: x mandatory;
+      scrollbar-width: none;
+      -ms-overflow-style: none;
+      /* Set a minimum width to ensure horizontal scrolling */
+      min-width: 100%;
+      /* Allow items to wrap if they exceed container width */
+      flex-wrap: nowrap;
+    }
+
+    .carousel::-webkit-scrollbar {
+      display: none;
+    }
+
+    .carousel-item {
+      width: 200px; /* eller en hvilken som helst anden ønsket bredde */
+    }
+  </style>
+</div>
