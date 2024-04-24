@@ -37,7 +37,7 @@
 
     <!-- Fourth image -->
     <div class="slides">
-      <img class="slide" src="/img/svg/repair.svg" alt="winter" />
+      <img class="slide" src="/img/svg/embroidery.svg" alt="winter" />
       <div class="overlay_slider">
         <div class="text-box">
           <h2>Winter</h2>
@@ -124,6 +124,7 @@
     display: inline-block;
     margin: 8px 2px;
   }
+
   .dots:hover {
     cursor: pointer;
     background-color: rgba(0, 0, 0, 0.4);
@@ -195,7 +196,7 @@
 
     slides[index].style.display = "block";
     dotArray[index].className += " activeDot";
-    place.innerHTML = locations[index];
+    // place.innerHTML = locations[index];
   }
 
   nextArrow.onclick = function () {
