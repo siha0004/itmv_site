@@ -21,16 +21,12 @@ import SliderWebfeature from "../components/SliderWebfeature.astro";
     </div>
     <article>
       <Accordion question="Hvad tilbyder vi?" answer="Vi tilbyder reparation, tilpasning og fornyelse af tøj til din virksomheds medarbejdere. Vores team består af to syerske og en designer. De vil sidde klar ved symaskinerne, til at hjælpe jer med at forlænge levetiden på tøjet." />
-      <Accordion
-        question="Hvorffor skal du vælge os?"
-        answer="Igennem repair service gør du genanvendelse let og tilgængeligt for dine medarbejdere, og du styrker din virksomheds E (environmental) & S (social) i jeres ESG mål. Samtidig støtter du ITMVs arbejde med at skabe flere lønnede timer til vores syersker."
-      />
-      <Accordion
-        question="Hvordan foregår det?"
-        answer="Sammen aftaler vi en fast dag, hvor vores team kommer ud til din virksomhed (Københavnsområdet, tilgængeligt med offentlig transport). Der vil være drop in og aflevering af tøjet om morgenen. Vi bestræber os på at blive færdige med dagens reparationer samme dag. Men det kan variere, afhængig af opgaven."
-      />
+      <Accordion question="Hvorfor skal du vælge os?" answer="Igennem repair service gør du genanvendelse let og tilgængeligt for dine medarbejdere, og du styrker din virksomheds E (environmental) & S (social) i jeres ESG mål. Samtidig støtter du ITMVs arbejde med at skabe flere lønnede timer til vores syersker." />
+      <Accordion question="Hvordan foregår det?" answer="Sammen aftaler vi en fast dag, hvor vores team kommer ud til din virksomhed (Københavnsområdet, tilgængeligt med offentlig transport). Der vil være drop in og aflevering af tøjet om morgenen. Vi bestræber os på at blive færdige med dagens reparationer samme dag. Men det kan variere, afhængig af opgaven." />
     </article>
-    <Button type="secondary">Bestil nu</Button>
+    <div class="center_button">
+      <Button type="secondary">Bestil nu</Button>
+    </div>
   </section>
   <section class="webfeatures">
     <article>
@@ -70,6 +66,11 @@ import SliderWebfeature from "../components/SliderWebfeature.astro";
   }
   .icon {
     width: 20%;
+  }
+
+  .center_button {
+    display: flex;
+    justify-content: center;
   }
 
   .webfeatures {
