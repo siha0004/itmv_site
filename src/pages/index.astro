@@ -1,49 +1,75 @@
 ---
 import MainLayout from "../layouts/MainLayout.astro";
 import Button from "../components/Button.astro";
-import Text from "../components/Text.astro";
 import Accordion from "../components/Accordion.astro";
 import CardReview from "../components/CardReview.astro";
 import CardWebfeature from "../components/CardWebfeature.astro";
-import Hero from "../components/Hero.astro";
-import CTA from "../components/CTA.astro";
 import Partners from "../components/Partners.astro";
 import CardPackage from "../components/CardPackage.astro";
 import Blue from "../components/Blue.astro";
+import Contact from "../components/Contact.astro";
 ---
 
 <MainLayout>
-  <Hero name="- Sif, Designer"> "Her står der noget godt og klogt, som jeg mener" </Hero>
-  <div>
-    <Button type="primary"> Tester </Button>
-    <Button type="secondary"> Tester Accent</Button>
-  </div>
-  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
-  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
-  <Accordion question="Hvad er spørgsmålet?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
-  <CardReview name="Sif Melkane" title="Multimediedesigner">
-    <p>Her er et citat som jeg lige finder på, fordi der skal stå noget!</p>
-  </CardReview>
-  <CardWebfeature name="Sif Melkane, 25 år" title="Multimediedesigner" />
-  <Text heading="Sif finder lige på noget">
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quae consectetur suscipit, corrupti, incidunt laudantium ea similique temporibus, officiis nostrum sapiente quia. Labore, quo harum delectus possimus alias saepe doloribus omnis.</p>
-    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde sint accusamus eos aut quo, blanditiis, distinctio in iusto recusandae, nisi et voluptate incidunt consequatur labore optio exercitationem nobis. Aliquid, delectus.</p>
-  </Text>
-  <Blue heading="Tester">
-    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
-    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
-    <CardPackage name="SIFSKIS" times="12 gange om måneden" price_one="1200" price_total="45.000"> Repair service en gang i mellem </CardPackage>
+  <section class="hero">
+    <h1>Repair Service</h1>
+    <p>Vi gør genanvendelse let tilgængelig for din virksomheds medarbejdere, samtidig med at du styrker virksomhedens ESG-mål.</p>
+    <div class="icons">
+      <img class="icon" src="/img/svg/embroidery.svg" alt="Ikon af brodering" />
+      <img class="icon" src="/img/svg/measure.svg" alt="Ikon af opmåling" />
+      <img class="icon" src="/img/svg/repair.svg" alt="Ikon af reperation" />
+    </div>
+    <article>
+      <Accordion question="Hvad tilbyder vi?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+      <Accordion question="Hvorffor skal du vælge os?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+      <Accordion question="Hvordan foregår det?" answer="Det er det der skal svares på her i dette tekst som du kan læse her :)" />
+    </article>
+    <Button type="secondary">Bestil nu</Button>
+  </section>
+  <section class="webfeatures">
+    <h2>Mød teamet</h2>
+    <p>Læs mere om kvinderne bag Repair Service teamet, og hør hvordan dette har været med til at ændrer deres hverdag.</p>
+    <article>
+      <CardWebfeature name="Ira, 38 år" title="Syerske" />
+    </article>
+  </section>
+  <Blue heading="Pakker">
+    <CardPackage name="Den Enkle" times="1 gang" price_one="5400" price_total="5400"> Repair service én gang </CardPackage>
+    <CardPackage name="Den Intensive" times="1 uge" price_one="4100" price_total="20.500"> Repair service <br /> en hel uge intensivt </CardPackage>
+    <CardPackage name="Den Lille" times="6 gang" price_one="4500" price_total="27.000"> Repair service en gang om måneden, i 1/2 år </CardPackage>
+    <CardPackage name="Den Mellem" times="12 gange" price_one="4500" price_total="54.000"> Repair service en gang om måneden, i et år</CardPackage>
+    <CardPackage name="Den Store" times="4 gange" price_one="4500" price_total="18.000"> Repair service en gang i kvartalet</CardPackage>
+    <CardPackage name="Den Ambitiøse" times="24 gange" price_one="4500" price_total="108.000"> Repair service to gange om måneden, i et år</CardPackage>
+    <Button type="primary">Bestil nu</Button>
   </Blue>
-  <Partners heading="Samarbejde" />
-  <CTA heading="Repair Service"> Lorem ipsum dolor sit amet consectetur, sunt impedit! Similique? </CTA>
+  <Partners heading="Samarbejder" />
+  <CardReview name="Mark Petterson" title="Digital redaktør, KAB">
+    <p>Fantastisk koncept. Jeg er glad for at kunne hjælpe de to syerske, med at få foden ind på arbejdsmarkedet.</p>
+  </CardReview>
+  <Contact />
 </MainLayout>
 
 <style>
-  div {
-    background-color: var(--primary);
-    height: 300px;
-    width: 100%;
+  .hero {
+    background-color: var(--secondary);
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+  .icons {
+    display: flex;
+    justify-content: space-evenly;
+    padding: 1rem;
+  }
+  .icon {
+    width: 20%;
+  }
 
-    padding: 1rem 2rem;
+  .webfeatures {
+    padding: 4rem 2rem;
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
   }
 </style>
