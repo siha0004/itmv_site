@@ -1,0 +1,26 @@
+---
+
+---
+
+<div class="carousel">
+  <slot />
+</div>
+<style>
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Set a minimum width to ensure horizontal scrolling */
+    min-width: 100%;
+    /* Allow items to wrap if they exceed container width */
+    flex-wrap: nowrap;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+</style>
