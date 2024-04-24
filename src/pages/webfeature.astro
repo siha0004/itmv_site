@@ -18,8 +18,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     <p>Bla bla</p>
     <p>Bla bla</p>
   </Text>
-  <video src="/#">VIDEO</video>
-  <img src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV " />
+  <video autoplay muted loop class="video">
+    <source src="https://trineekberg.dk/kea/09_indhold/video/webfeature_mobile.mp4" type="video/mp4" />
+  </video>
+  <img class="timeline" src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV " />
   <Text heading="LOREM">
     <p>Bla bla</p>
     <p>Bla bla</p>
@@ -27,3 +29,9 @@ import MainLayout from "../layouts/MainLayout.astro";
   <Carousel />
   <CTA heading="Repair Service"> Lorem ipsum dolor sit amet consectetur, sunt impedit! Similique? </CTA>
 </MainLayout>
+
+<style>
+  .video {
+    width: 100%;
+  }
+</style>
