@@ -9,9 +9,14 @@ const { heading } = Astro.props;
     <p class="number">12</p>
     <p>Kvinder i job</p>
   </article>
-  <h3>{heading}</h3>
-  <p class="text"><slot /></p>
-  <Button type="secondary">Bestil nu</Button>
+  <div>
+    <h3>{heading}</h3>
+    <p class="text"><slot /></p>
+    <div class="button_center">
+      <Button type="secondary">Bestil nu</Button>
+    </div>
+  </div>
+
   <img class="graphics" src="/img/svg/heart_line.svg" alt="illustration" />
 </section>
 
@@ -38,13 +43,46 @@ const { heading } = Astro.props;
     font-size: 4rem;
   }
 
+  div {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
   .text {
     text-align: center;
+  }
+
+  .button_center {
+    display: flex;
+    justify-content: center;
   }
   .graphics {
     position: absolute;
     top: 3rem;
     left: -1rem;
     width: 115%;
+  }
+
+  @media (min-width: 800px) {
+    section {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+    }
+    .data {
+      display: grid;
+      grid-column: 1;
+      place-self: center;
+    }
+    .graphics {
+      top: 4rem;
+      left: 6rem;
+      width: 38%;
+    }
+    div {
+      display: grid;
+      place-self: center;
+      justify-items: center;
+    }
   }
 </style>
