@@ -18,26 +18,26 @@ import CardReview from "./CardReview.astro";
       <p>"Det er helt fantastisk, en af de bedste personalegoder jeg har oplevet i KAB. Den rammer lige ind i bæredygtighedsdagsordenen, og gør det enormt nemt. Samtidig løser ordningen også et dårlig samvittighedsproblem."</p>
     </CardReview>
   </div>
-  <style>
-    .carousel {
-      display: flex;
-      flex-direction: row;
-      overflow-x: auto;
-      scroll-snap-type: x mandatory;
-      scrollbar-width: none;
-      -ms-overflow-style: none;
-      /* Set a minimum width to ensure horizontal scrolling */
-      min-width: 100%;
-      /* Allow items to wrap if they exceed container width */
-      flex-wrap: nowrap;
-    }
-
-    .carousel::-webkit-scrollbar {
-      display: none;
-    }
-
-    .carousel-item {
-      width: 200px;
-    }
-  </style>
 </div>
+<style>
+  .carousel {
+    display: flex;
+    flex-direction: row;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    scrollbar-width: none;
+    -ms-overflow-style: none;
+    /* Set a minimum width to ensure horizontal scrolling */
+    min-width: 100%;
+    /* Allow items to wrap if they exceed container width */
+    flex-wrap: nowrap;
+  }
+
+  .carousel::-webkit-scrollbar {
+    display: none;
+  }
+
+  .carousel-item {
+    width: 200px;
+  }
+</style>
