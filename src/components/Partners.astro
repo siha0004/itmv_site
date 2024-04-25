@@ -21,10 +21,6 @@ const { heading } = Astro.props;
   </article>
 
   <style>
-    section {
-      padding: 4rem 2rem;
-    }
-
     article {
       display: grid;
       grid-template-columns: repeat(auto-fill, minmax(100px, 1fr));
@@ -35,6 +31,12 @@ const { heading } = Astro.props;
       margin-bottom: 2rem;
     }
     .logo1 {
+    }
+
+    @media (min-width: 800px) {
+      h2 {
+        margin-top: 1rem;
+      }
     }
   </style>
 </section>

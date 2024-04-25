@@ -1,16 +1,16 @@
 ---
-const { name, title } = Astro.props;
+const { name, title, type } = Astro.props;
 ---
 
 <article>
-  <div class="info">
+  <div class="info front">
     <h2 class="name">{name}</h2>
     <h3 class="title">{title}</h3>
   </div>
-  <div class="content">
+  <div class="content front">
     <slot />
   </div>
-  <img class="quote" src="/img/svg/quote.svg" alt="quote icon" />
+  <img class=`quote_${type}` src="/img/svg/quote_beige.svg" alt="quote icon" />
 </article>
 
 <style>
@@ -23,13 +23,14 @@ const { name, title } = Astro.props;
     box-shadow:
       0px 1px 3px rgba(210, 210, 210, 0.8),
       0px 4px 10px rgba(210, 210, 210, 0.8);
+    overflow: hidden;
   }
   .info {
     border-bottom: thin dashed var(--accent);
-    padding: 2rem 2rem 0.5rem;
+    padding: 2rem 1rem 0.5rem;
   }
   .content {
-    padding: 1rem 2rem 2rem;
+    padding: 1rem 1rem 2rem;
   }
 
   .name {
@@ -43,10 +44,28 @@ const { name, title } = Astro.props;
     font-size: 0.8rem;
   }
 
-  .quote {
+  .quote_1 {
     position: absolute;
-    width: 3rem;
-    top: 1.5rem;
-    right: 1.5rem;
+    width: 8rem;
+    top: 2.5rem;
+    right: 7.5rem;
+  }
+  .quote_2 {
+    position: absolute;
+    width: 10rem;
+    top: -1.5rem;
+    right: -2.5rem;
+  }
+  .quote_3 {
+    position: absolute;
+    width: 13rem;
+    top: 11.5rem;
+    right: -2.5rem;
+    rotate: 180deg;
+  }
+
+  .front {
+    position: relative;
+    z-index: 2;
   }
 </style>
