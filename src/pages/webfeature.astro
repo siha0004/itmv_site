@@ -27,23 +27,26 @@ import MainLayout from "../layouts/MainLayout.astro";
       <p>I september 2022 satte Ira første fod i værkstedet på nørrebro og blev en del at ITMV fællesskabet i september 2022. Siden oktober samme år har hun været fastansat, og arbejder 20 timer om ugen bl.a. som del af Repair Service. Med hendes dygtige evner og ro, er Ira en uundværlig del af teamet.</p>
     </Text>
   </section>
-  <video autoplay muted loop class="video">
-    <source src="https://trineekberg.dk/kea/09_indhold/video/webfeature_mobile.mp4" type="video/mp4" />
-  </video>
-  <section class="data">
+  <section class="video_section">
+    <div>
+      <video autoplay muted loop class="video">
+        <source src="https://trineekberg.dk/kea/09_indhold/video/webfeature_mobile.mp4" type="video/mp4" />
+      </video>
+    </div>
     <div>
       <picture>
         <source media="(min-width:800px)" srcset="/img/svg/graph_desk.svg" class="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV" />
-        <img class="timeline" src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV " />
+        <img class="timeline" src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV" />
       </picture>
     </div>
-    <div class="data_text">
-      <Text heading="LOREM" show="hide">
-        <p>Her nyder hun særligt at være en del af repair service, hvor hun løser de forskellige repair, såsom at udskifte lynlåse i trøjer og bukser, reparere lommer og tilpasse tøj efter behov. Hendes arbejde involverer en masse tekniske aspekter, hvor hun bruger forskellige materialer og farver i forskellige størrelser. Det er vigtigt for hende, at alt ser så godt og smukt ud som muligt.</p>
-        <p>I Tråd Med Verden tilbyder Repair Service, hvor de tager ud til virksomheder og reparere, tilpasser og fornyer tøj til en virksomheds medarbejdere. Ifølge Ira er det bedste ved at komme ud til virksomhederne, at kunne se den glæde som hun kan skabe hos andre.</p>
-      </Text>
-    </div>
   </section>
+  <div class="data_text">
+    <Text heading="LOREM" show="hide">
+      <p>Her nyder hun særligt at være en del af repair service, hvor hun løser de forskellige repair, såsom at udskifte lynlåse i trøjer og bukser, reparere lommer og tilpasse tøj efter behov. Hendes arbejde involverer en masse tekniske aspekter, hvor hun bruger forskellige materialer og farver i forskellige størrelser. Det er vigtigt for hende, at alt ser så godt og smukt ud som muligt.</p>
+      <p>I Tråd Med Verden tilbyder Repair Service, hvor de tager ud til virksomheder og reparere, tilpasser og fornyer tøj til en virksomheds medarbejdere. Ifølge Ira er det bedste ved at komme ud til virksomhederne, at kunne se den glæde som hun kan skabe hos andre.</p>
+    </Text>
+  </div>
+
   <Carousel />
   <CTA heading="Repair Service"> Tilmeld din virksomhed og vær med til at skabe flere jobs for udsatte kvinder </CTA>
 </MainLayout>
@@ -59,13 +62,14 @@ import MainLayout from "../layouts/MainLayout.astro";
       display: flex;
       justify-content: center;
     }
-    .data {
+    .video_section {
       display: grid;
       grid-template-columns: 1fr 1fr;
     }
     .data_text {
       display: flex;
       align-items: center;
+      justify-content: center;
     }
   }
 </style>
