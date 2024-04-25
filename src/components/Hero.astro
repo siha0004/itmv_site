@@ -3,7 +3,10 @@ const { name } = Astro.props;
 ---
 
 <article>
-  <img src="/img/webp/hero_mobile.webp" alt="Billede af kvinde" />
+  <picture>
+    <source media="(min-width:800px)" srcset="/img/webp/hero_desk.webp" class="hero_img" />
+    <img src="/img/webp/hero_mobile.webp" alt="Billede af kvinde" />
+  </picture>
   <div class="gradient">
     <div class="info">
       <h1 class="title">
@@ -45,5 +48,11 @@ const { name } = Astro.props;
   }
   .arrow {
     width: 0.75rem;
+  }
+
+  @media (min-width: 800px) {
+    .gradient {
+      height: 8rem;
+    }
   }
 </style>

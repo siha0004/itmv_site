@@ -15,7 +15,12 @@ import MainLayout from "../layouts/MainLayout.astro";
       <p>I Tyskland havde de svært ved at finde et sted at bo. Derfor kiggede hun på kortet, hvor Danmark stak ud, og besluttede sig for at tage hertil, selvom hun nærmest aldrig havde hørt om landet før. Den 18. marts 2022 stod hun på Bernstorffsgade ved Københavns Hovedbanegård.</p>
     </Text>
   </section>
-  <img src="/img/svg/timeline.svg" alt="Tidlinjer over Iras proces i forbindelse med ITMV" />
+  <section>
+    <picture>
+      <source media="(min-width:800px)" srcset="/img/svg/timeline_desk.svg" class="Tidlinjer over Iras proces i forbindelse med ITMV" />
+      <img src="/img/svg/timeline.svg" alt="Tidlinjer over Iras proces i forbindelse med ITMV" />
+    </picture>
+  </section>
   <section class="text_2">
     <Text heading="LOREM" show="hide">
       <p>Da hun ankom til Danmark, drøftede hun med jobcentret mulighederne for at finde et job, hvor hun kunne få lov til at arbejde med sine hænder og forfølge sin passion. Allerede fra en ung alder har Ira haft en passion for at skabe "cute", smukke og nye ting, og det er noget, hun stadig brænder for.</p>
@@ -27,9 +32,12 @@ import MainLayout from "../layouts/MainLayout.astro";
   </video>
   <section class="data">
     <div>
-      <img class="timeline" src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV " />
+      <picture>
+        <source media="(min-width:800px)" srcset="/img/svg/graph_desk.svg" class="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV" />
+        <img class="timeline" src="/img/svg/graph.svg" alt="Grafik over praktikanternes tilfredshed, med deres praktikforløb hos IMTV " />
+      </picture>
     </div>
-    <div>
+    <div class="data_text">
       <Text heading="LOREM" show="hide">
         <p>Her nyder hun særligt at være en del af repair service, hvor hun løser de forskellige repair, såsom at udskifte lynlåse i trøjer og bukser, reparere lommer og tilpasse tøj efter behov. Hendes arbejde involverer en masse tekniske aspekter, hvor hun bruger forskellige materialer og farver i forskellige størrelser. Det er vigtigt for hende, at alt ser så godt og smukt ud som muligt.</p>
         <p>I Tråd Med Verden tilbyder Repair Service, hvor de tager ud til virksomheder og reparere, tilpasser og fornyer tøj til en virksomheds medarbejdere. Ifølge Ira er det bedste ved at komme ud til virksomhederne, at kunne se den glæde som hun kan skabe hos andre.</p>
@@ -54,6 +62,10 @@ import MainLayout from "../layouts/MainLayout.astro";
     .data {
       display: grid;
       grid-template-columns: 1fr 1fr;
+    }
+    .data_text {
+      display: flex;
+      align-items: center;
     }
   }
 </style>
