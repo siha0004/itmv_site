@@ -7,25 +7,33 @@ import MainLayout from "../layouts/MainLayout.astro";
 ---
 
 <MainLayout>
-  <Hero name="- Ira, syerske"> “Det har været med til at give håb om at kunne arbejde igen” </Hero>
-  <section class="text_1">
-    <Text heading="LOREM" show="hide">
-      <p>Ira elsker den atmosfære der er hos I Tråd Med Verden, Det er et sted, hvor hun føler sig hjemme. Hun elsker at være en del af virksomheden og nyder at være med til at skabe nye ting som en del af sit daglige arbejde. Efter næsten halvandet år hos virksomheden føler hun sig stadig godt tilpas og værdsat, og hun sætter pris på den kreativitet, som hendes arbejde giver hende mulighed for at udfolde.</p>
-      <p>I marts 2022 flygtede Ira og hendes to døtre til Danmark fra krigen i Ukraine. Det var en svær beslutning for hende, da hun bag sig efterlod sin mand, bedstemor og venner, men da hendes arbejde og børnenes skoler lukkede så hun ingen anden udvej. Først flygtede de til Tyskland, hvor en million ukrainere siden krigens udbrud har søgt tilflugt ifølge de seneste tal fra FN’s flygtningeorganisation.</p>
-      <p>I Tyskland havde de svært ved at finde et sted at bo. Derfor kiggede hun på kortet, hvor Danmark stak ud, og besluttede sig for at tage hertil, selvom hun nærmest aldrig havde hørt om landet før. Den 18. marts 2022 stod hun på Bernstorffsgade ved Københavns Hovedbanegård.</p>
-    </Text>
+  <section class="hero">
+    <Hero name="- Ira, syerske"> “Det har været med til at give håb om at kunne arbejde igen” </Hero>
   </section>
-  <section>
-    <picture>
-      <source media="(min-width:800px)" srcset="/img/svg/timeline_desk.svg" class="Tidlinjer over Iras proces i forbindelse med ITMV" />
-      <img src="/img/svg/timeline.svg" alt="Tidlinjer over Iras proces i forbindelse med ITMV" />
-    </picture>
+  <section class="text_1">
+    <article>
+      <Text heading="LOREM" show="hide">
+        <p>Ira elsker den atmosfære der er hos I Tråd Med Verden, Det er et sted, hvor hun føler sig hjemme. Hun elsker at være en del af virksomheden og nyder at være med til at skabe nye ting som en del af sit daglige arbejde. Efter næsten halvandet år hos virksomheden føler hun sig stadig godt tilpas og værdsat, og hun sætter pris på den kreativitet, som hendes arbejde giver hende mulighed for at udfolde.</p>
+        <p>I marts 2022 flygtede Ira og hendes to døtre til Danmark fra krigen i Ukraine. Det var en svær beslutning for hende, da hun bag sig efterlod sin mand, bedstemor og venner, men da hendes arbejde og børnenes skoler lukkede så hun ingen anden udvej. Først flygtede de til Tyskland, hvor en million ukrainere siden krigens udbrud har søgt tilflugt ifølge de seneste tal fra FN’s flygtningeorganisation.</p>
+        <p>I Tyskland havde de svært ved at finde et sted at bo. Derfor kiggede hun på kortet, hvor Danmark stak ud, og besluttede sig for at tage hertil, selvom hun nærmest aldrig havde hørt om landet før. Den 18. marts 2022 stod hun på Bernstorffsgade ved Københavns Hovedbanegård.</p>
+      </Text>
+    </article>
+  </section>
+  <section class="timeline">
+    <article>
+      <picture>
+        <source media="(min-width:800px)" srcset="/img/svg/timeline_desk.svg" class="Tidlinjer over Iras proces i forbindelse med ITMV" />
+        <img src="/img/svg/timeline.svg" alt="Tidlinjer over Iras proces i forbindelse med ITMV" />
+      </picture>
+    </article>
   </section>
   <section class="text_2">
-    <Text heading="LOREM" show="hide">
-      <p>Da hun ankom til Danmark, drøftede hun med jobcentret mulighederne for at finde et job, hvor hun kunne få lov til at arbejde med sine hænder og forfølge sin passion. Allerede fra en ung alder har Ira haft en passion for at skabe "cute", smukke og nye ting, og det er noget, hun stadig brænder for.</p>
-      <p>I september 2022 satte Ira første fod i værkstedet på nørrebro og blev en del at ITMV fællesskabet i september 2022. Siden oktober samme år har hun været fastansat, og arbejder 20 timer om ugen bl.a. som del af Repair Service. Med hendes dygtige evner og ro, er Ira en uundværlig del af teamet.</p>
-    </Text>
+    <article>
+      <Text heading="LOREM" show="hide">
+        <p>Da hun ankom til Danmark, drøftede hun med jobcentret mulighederne for at finde et job, hvor hun kunne få lov til at arbejde med sine hænder og forfølge sin passion. Allerede fra en ung alder har Ira haft en passion for at skabe "cute", smukke og nye ting, og det er noget, hun stadig brænder for.</p>
+        <p>I september 2022 satte Ira første fod i værkstedet på nørrebro og blev en del at ITMV fællesskabet i september 2022. Siden oktober samme år har hun været fastansat, og arbejder 20 timer om ugen bl.a. som del af Repair Service. Med hendes dygtige evner og ro, er Ira en uundværlig del af teamet.</p>
+      </Text>
+    </article>
   </section>
   <section class="video_section">
     <div>
@@ -40,12 +48,14 @@ import MainLayout from "../layouts/MainLayout.astro";
       </picture>
     </div>
   </section>
-  <div class="data_text">
-    <Text heading="LOREM" show="hide">
-      <p>Her nyder hun særligt at være en del af repair service, hvor hun løser de forskellige repair, såsom at udskifte lynlåse i trøjer og bukser, reparere lommer og tilpasse tøj efter behov. Hendes arbejde involverer en masse tekniske aspekter, hvor hun bruger forskellige materialer og farver i forskellige størrelser. Det er vigtigt for hende, at alt ser så godt og smukt ud som muligt.</p>
-      <p>I Tråd Med Verden tilbyder Repair Service, hvor de tager ud til virksomheder og reparere, tilpasser og fornyer tøj til en virksomheds medarbejdere. Ifølge Ira er det bedste ved at komme ud til virksomhederne, at kunne se den glæde som hun kan skabe hos andre.</p>
-    </Text>
-  </div>
+  <section class="data">
+    <div class="data_text">
+      <Text heading="LOREM" show="hide">
+        <p>Her nyder hun særligt at være en del af repair service, hvor hun løser de forskellige repair, såsom at udskifte lynlåse i trøjer og bukser, reparere lommer og tilpasse tøj efter behov. Hendes arbejde involverer en masse tekniske aspekter, hvor hun bruger forskellige materialer og farver i forskellige størrelser. Det er vigtigt for hende, at alt ser så godt og smukt ud som muligt.</p>
+        <p>I Tråd Med Verden tilbyder Repair Service, hvor de tager ud til virksomheder og reparere, tilpasser og fornyer tøj til en virksomheds medarbejdere. Ifølge Ira er det bedste ved at komme ud til virksomhederne, at kunne se den glæde som hun kan skabe hos andre.</p>
+      </Text>
+    </div>
+  </section>
 
   <Carousel />
   <CTA heading="Repair Service"> Tilmeld din virksomhed og vær med til at skabe flere jobs for udsatte kvinder </CTA>
@@ -57,6 +67,11 @@ import MainLayout from "../layouts/MainLayout.astro";
   }
 
   @media (min-width: 800px) {
+    .text_1,
+    .text_2,
+    .data_text {
+      padding: 4rem 12rem;
+    }
     .text_1,
     .text_2 {
       display: flex;
